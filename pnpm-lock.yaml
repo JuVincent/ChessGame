@@ -17,10 +17,12 @@ specifiers:
   unocss: ^0.47.6
   unplugin-auto-import: ^0.12.1
   unplugin-vue-components: ^0.22.12
+  v-drag: ^3.0.8
   vite: ^4.0.0
   vite-plugin-pages: ^0.27.1
   vite-ssg: ^0.22.1
   vue: ^3.2.45
+  vue-draggable-next: ^2.1.1
   vue-router: ^4.1.6
   vue-tsc: ^1.0.13
 
@@ -30,7 +32,9 @@ dependencies:
   '@vueuse/core': 9.6.0_vue@3.2.45
   '@vueuse/head': 1.0.22_vue@3.2.45
   pinia: 2.0.28_prq2uz4lho2pwp6irk4cfkrxwu
+  v-drag: 3.0.8
   vue: 3.2.45
+  vue-draggable-next: 2.1.1_vue@3.2.45
   vue-router: 4.1.6_vue@3.2.45
 
 devDependencies:
@@ -5153,6 +5157,10 @@ packages:
     engines: {node: '>= 0.4.0'}
     dev: true
 
+  /v-drag/3.0.8:
+    resolution: {integrity: sha512-JLxDVKBHH0GLC8r5BMDvtEkvELQJxV/v4TphZ7UAl1i8390SCOrwLXbrNO1MSqeggvP0yUgBNgfC2IXM4sjsVw==}
+    dev: false
+
   /validate-npm-package-license/3.0.4:
     resolution: {integrity: sha512-DpKm2Ui/xN7/HQKCtpZxoRWBhZ9Z0kqtygG8XCgNQ8ZlDnxuQmWhj566j8fN4Cu3/JmbhsDo7fcAJq4s9h27Ew==}
     dependencies:
@@ -5277,6 +5285,15 @@ packages:
         optional: true
     dependencies:
       vue: 3.2.45
+
+  /vue-draggable-next/2.1.1_vue@3.2.45:
+    resolution: {integrity: sha512-f5lmA7t6LMaL4viR7dU30zzvqJzaKQs0ymL0Jy9UDT9uiZ2tXF3MzPzEvpTH2UODXZJkT+SnjeV1fXHMsgXLYA==}
+    peerDependencies:
+      sortablejs: ^1.14.0
+      vue: ^3.2.2
+    dependencies:
+      vue: 3.2.45
+    dev: false
 
   /vue-eslint-parser/9.0.3_eslint@8.29.0:
     resolution: {integrity: sha512-yL+ZDb+9T0ELG4VIFo/2anAOz8SvBdlqEnQnvJ3M7Scq56DvtjY0VY88bByRZB0D4J0u8olBcfrXTVONXsh4og==}

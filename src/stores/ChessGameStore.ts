@@ -2,6 +2,9 @@ import { defineStore } from 'pinia'
 import type { IChessPiece } from '~/model/chesspiece'
 import { Bishop, ChessCoordinate, King, Knight, Pawn, Position, Queen, Tower } from '~/model/chesspiece'
 
+export const CHESSBOARD_ROWS =  [1, 2, 3, 4, 5, 6, 7, 8]
+export const CHESSBOARD_COLUMNS =  ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']
+
 export const useChessGameStore = defineStore('chessGame', {
   state: () => ({
     isWhiteTurn: true,
@@ -41,8 +44,6 @@ export const useChessGameStore = defineStore('chessGame', {
     ],
   }),
   getters: {
-    getRows: () => [1, 2, 3, 4, 5, 6, 7, 8],
-    getColumns: () => ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'],
     getPiece: (state) => {
       return (coordinate: ChessCoordinate): IChessPiece | undefined => {
         return state.board.find((el: Position) => el.coordinate.x === coordinate.x && el.coordinate.y === coordinate.y)?.piece as IChessPiece
